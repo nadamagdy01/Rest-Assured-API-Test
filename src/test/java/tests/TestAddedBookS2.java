@@ -11,11 +11,16 @@ public class TestAddedBookS2 {
     @Test
     public void testCreateBook() {
 
+        // Create a RequestSpecification object
         RequestSpecification request = RestAssured.given();
+
+        // Set the base URI for the API endpoint
         request.baseUri("https://restful-booker.herokuapp.com/booking");
+
+        // Set the content type of the request to JSON
         request.header("Content-Type", "application/json");
 
-
+        // The request body with the booking details
         JSONObject requestParams = new JSONObject();
         requestParams.put("firstname", "Nada");
         requestParams.put("lastname", "Magdy");
@@ -28,13 +33,13 @@ public class TestAddedBookS2 {
         requestParams.put("bookingdates", bookingDates);
         requestParams.put("additionalneeds", "Breakfast");
 
-
+        // Send a POST request
         Response response = request.body(requestParams.toString()).post();
 
-
+        // Print the response body
         System.out.println("Response Body: " + response.getBody().asPrettyString());
 
-
+        // Validate the response status and the booking details
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().getString("booking.firstname"), "Nada");
         Assert.assertEquals(response.jsonPath().getString("booking.lastname"), "Magdy");
