@@ -88,8 +88,7 @@ This document provides detailed instructions for automating tests for the Bookin
 ### Steps to Run the Tests
 
 1. **Clone the Repository**
-   ```bash
-   git clone <repository_url>
+   git clone <https://github.com/nadamagdy01/Rest-Assured-API-Test/tree/master>
 
 2. **Setup Project in IntelliJ IDEA**
 
@@ -102,7 +101,6 @@ Ensure all dependencies are resolved as per the pom.xml.
 Ensure that the test data (e.g., JSON files) is ready and correctly placed in the project directory.
 
 4. **Run Tests**
-
 mvn test
 
 5. **Generate Reports**
