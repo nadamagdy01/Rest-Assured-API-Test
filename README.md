@@ -14,7 +14,7 @@ This project involves automating tests for the Booking API using Java, Rest Assu
     - [Prerequisites](#prerequisites)
     - [Steps to Run the Tests](#steps-to-run-the-tests)
 - [Deliverables](#deliverables)
-- [Contact Information](#contact-information)
+
 
 ## Overview
 
